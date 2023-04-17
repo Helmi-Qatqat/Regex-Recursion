@@ -1,8 +1,14 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy) {
-  // Write you logic here.
-  return;
+  let count = 0;
+  if (dividedBy == 0) {
+    return 0;
+  }
+  while (count*dividedBy !== number) {
+    count++
+  }
+  return count
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion
@@ -13,7 +19,10 @@ pow(2,4) = 16
 
 function pow(x, n) {
   // Write you logic here.
-  return;
+  if (n == 0) {
+    return 1
+  }
+  return 2*pow(x, n-1);
 }
 
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,
@@ -27,8 +36,14 @@ Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n) {
   // Write you logic here.
-  return;
-}
+  if (n == 0) {
+    return 0
+  } else if (n == 1) {
+    return 1
+  } else {
+    return fibonacci(n-1) + fibonacci(n-2);
+  }
+} 
 
 /* Optional 
 
@@ -60,7 +75,6 @@ describe("Test division", () => {
       expect(division(10, 2)).toStrictEqual(5);
       expect(division(10, 0)).toStrictEqual(0);
       expect(division(0, 10)).toStrictEqual(0);
-
   })
 });
 
