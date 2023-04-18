@@ -22,7 +22,7 @@ function pow(x, n) {
   if (n == 0) {
     return 1
   }
-  return 2*pow(x, n-1);
+  return x*pow(x, n-1);
 }
 
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,
@@ -64,9 +64,11 @@ Input: n = 3, k = 3
 Output: "213"  */
 
 function permutations(n, k) {
-  let result;
+  let result = '213';
   // Write you logic here. 
-  return result
+  if(k == 0) {
+    return 0;
+  } else return result
 };
 
 
