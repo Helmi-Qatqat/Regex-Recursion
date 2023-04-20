@@ -1,14 +1,12 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy) {
-  let count = 0;
   if (dividedBy == 0) {
     return 0;
   }
-  while (count*dividedBy !== number) {
-    count++
-  }
-  return count
+  if (number < dividedBy) {
+    return 0;
+  } else return 1 + division(number - dividedBy, dividedBy)
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion
@@ -64,11 +62,7 @@ Input: n = 3, k = 3
 Output: "213"  */
 
 function permutations(n, k) {
-  let result = '213';
   // Write you logic here. 
-  if(k == 0) {
-    return 0;
-  } else return result
 };
 
 
